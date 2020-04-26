@@ -21,7 +21,21 @@ body {
   max-width: 650px;
 }
 
+#logo {
+  margin-top: 85px;
+  margin-bottom: 55px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.call-to-action {
+  margin-bottom: 45px;
+}
+
 form {
+  margin-bottom: 90px;
   display: grid;
   grid-template-columns: 0.65fr 0.35fr;
   gap: 15px;
@@ -37,15 +51,29 @@ button {
   padding: 1em 3em;
 }
 
+#hero {
+  margin-bottom: 70px;
+}
+
 .socials {
   display: flex;
   justify-content: center;
+  margin-bottom: 15px;
 }
 
 .social-icon {
   width: 30px;
   height: 30px;
   margin: 6px;
+}
+
+footer small {
+  display: block;
+  margin-bottom: 10px;
+}
+
+footer {
+  margin: 30px;
 }
 
 /* TYPOGRAPHY */
