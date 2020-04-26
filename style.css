@@ -6,12 +6,35 @@
   --light-red: hsl(354, 100%, 66%);
   --gray: hsl(0, 0%, 59%);
   --very-dark-blue: hsl(209, 33%, 12%);
+  --corner: 10rem;
 }
 
 /* LAYOUT */
 
 body {
   text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 650px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 0.65fr 0.35fr;
+  gap: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 1em 1.25em;
+}
+
+button {
+  width: 100%;
+  padding: 1em 3em;
 }
 
 /* TYPOGRAPHY */
@@ -32,7 +55,8 @@ small {
   font-size: 0.6rem;
 }
 
-input {
+input,
+button {
   font-family: inherit;
   font-size: 0.8rem;
 }
@@ -42,8 +66,6 @@ input {
 }
 
 button {
-  font-family: inherit;
-  font-size: 0.8rem;
   font-weight: 600;
 }
 
@@ -56,4 +78,24 @@ body {
 strong,
 p {
   color: var(--very-dark-blue);
+}
+
+button {
+  background-color: var(--blue);
+  color: white;
+}
+
+/* DECORATION */
+
+input,
+button {
+  border-radius: var(--corner);
+}
+
+input {
+  border: 1px solid var(--gray);
+}
+
+button {
+  border: none;
 }
