@@ -149,7 +149,7 @@ button {
 
 /* FORM VALIDATION */
 
-.form-field.error input {
+form.error input {
   border: 2px solid var(--light-red);
 }
 
