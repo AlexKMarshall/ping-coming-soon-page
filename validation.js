@@ -30,6 +30,20 @@ const hasError = (field) => {
 const showError = (field, error) => {
   const parentFormField = field.parentElement;
   parentFormField.classList.add("error");
+
+  const fieldId = field.id || field.name;
+  const errorId = `error-for-${fieldId}`;
+
+  let errorMessage = parentFormField.querySelector(`#${errorId}`);
+  if (!errorMessage) {
+    errorMessage = document.createElement("div");
+    errorMessage.id = errorId;
+    errorMessage.className = "error-text";
+    parentFormField.appendChild(errorMessage);
+  }
+  errorMessage.innerHTML = error;
+
+  field.setAttribute("aria-describedby", errorId);
 };
 
 const removeError = (field) => {
