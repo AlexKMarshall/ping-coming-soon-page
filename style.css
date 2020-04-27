@@ -2,6 +2,8 @@
 
 :root {
   --blue: hsl(223, 87%, 63%);
+  --blue-highlight: hsl(223, 80%, 73%);
+  --blue-saturated: hsl(223, 95%, 68%);
   --pale-blue: hsl(223, 100%, 88%);
   --light-red: hsl(354, 100%, 66%);
   --gray: hsl(0, 0%, 59%);
@@ -171,4 +173,19 @@ button {
 .social-icon {
   border-radius: 50%;
   border: 1px solid var(--pale-blue);
+}
+
+/* ANIMATION */
+
+button {
+  transition: all 300ms;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--blue-highlight);
+}
+
+button:active {
+  background-color: var(--blue-saturated);
 }
