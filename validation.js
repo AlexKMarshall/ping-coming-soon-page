@@ -5,6 +5,8 @@ const emailInput = document.querySelector("input");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  validateField(emailInput);
+
   if (hasError(emailInput)) {
     return false;
   }
